@@ -1,0 +1,177 @@
+html {
+  font-size: 16px;
+  font-family: 'Open Sans', sans-serif;
+}
+
+body {
+  background-color: #E8E3EF;
+  background-image: url("Union.svg"), url("corner-widescreen.svg");
+  background-position: 
+    top left,
+    bottom left;
+  background-size: auto, 336px 313px;
+  background-repeat: no-repeat;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+  min-height: 100dvh;
+}
+
+@media (min-width: 1440px) {
+  body {
+    background-size: 100% auto, calc(100dvw * 0.25);
+  }
+}
+
+@media (max-width: 1024px) {
+  body {
+    background-image: url("Union.svg"), url("corner-smallscreen.svg");
+    background-size: auto, 233px 182px;
+  }
+}
+
+@media (max-width: 480px) {
+  body {
+    background-image: url("Union-smallscreen.svg"), url("corner-smallscreen.svg");
+    background-size: 100% auto, 233px 182px;
+  }
+}
+
+.card {
+  width: 20.25rem;
+  height: 36.3125rem;
+  flex-shrink: 0;
+  border-radius: 1.875rem;
+  overflow: hidden;
+  filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+}
+
+.header {
+  background-color: #DDF1F5;
+  width: 20.25rem;
+  height: 13.0625rem;
+  flex-shrink: 0;
+  background-image: url("Girl.svg");
+  background-repeat: no-repeat;
+  background-position: top 1.69rem right 1.63rem;
+  background-size: 83%;
+}
+
+.planet {
+  width: 9.1875rem;
+  height: 7.4375rem;
+  flex-shrink: 0;
+  padding: 1.25rem 0 0 0;
+  background-image: url("planet.png");
+  background-position: bottom;
+  background-repeat: no-repeat;
+}
+
+.main {
+  background-color: #1D99B5;
+  color: #FFFFFF;
+  width: 20.25rem;
+  height: 23.25rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  flex-shrink: 0;
+}
+
+.main > * {
+  margin-left: 2.38rem;
+  margin-right: 2.38rem;
+  min-width: 15.1875rem;
+}
+
+a {
+  text-decoration: none;
+}
+
+.airplane-img {
+  grid-area: airplane;
+  width: 1.5rem;
+  height: 1.5rem; 
+  background-color: #78B4C1;
+  border-radius: 50%;
+  padding: 0.25rem 0.38rem 0.44rem 0.31rem;
+  margin: 1rem;
+}
+
+.plan-name {
+  grid-area: name;
+  color: #135F70;
+  text-align: left;
+  margin-top: 0.25rem;
+  font-size: 1.25rem;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+}
+
+.plan-price {
+  grid-area: price;
+  color: #78B4C1;
+  text-align: left;
+  font-size: 1rem;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+}
+
+.price-box {
+  height: 4.25rem;
+  display: grid;
+  grid-template-columns: 1fr 3fr;
+  grid-template-rows: 0.25rem 1fr 1fr 0.25rem;
+  grid-template-areas: 
+    "airplane . . ."
+    "airplane name name name"
+    "airplane price price price"
+    "airplane . . .";
+  border-radius: 0.3125rem;
+  background: rgba(249, 253, 254, 0.78);
+}
+
+.next-step {
+  display: flex;
+  height: 2.75rem;
+  flex-direction: column;
+  justify-content: center;
+  flex-shrink: 0;
+  margin-top: 2.56rem;
+  border-radius: 0.3125rem;
+  background: #EFFCFF;
+  box-shadow: 0px 4px 20px 1px rgba(0, 0, 0, 0.25);
+  color: #1D99B5;
+  text-align: center;
+  font-size: 1rem;
+  font-weight: 700;
+}
+
+.cancel {
+  color: #FFF;
+  display: flex;
+  width: 7.4375rem;
+  min-width: 0;
+  margin-top: 1.62rem;
+  height: 1rem;
+  flex-direction: column;
+  justify-content: center;
+  flex-shrink: 0;
+  text-align: center;
+}
+
+.headline {
+  color: #FFF;
+  margin: 0 auto;
+  text-align: center;
+  font-family: Sansita;
+  font-size: 2.25rem;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+}
